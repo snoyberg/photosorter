@@ -1,0 +1,8 @@
+<p>
+    <a href=@{HomeR}>Go home
+<ul>
+    $forall post <- sort toposts
+        <li>
+            #{post}
+            <form style=display:inline method=post action=@{UnPostR post}>
+                <button>Unpost

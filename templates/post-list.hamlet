@@ -1,0 +1,9 @@
+<p>
+    <a href=@{HomeR}>Go home
+$if null posts
+    <p>No posts available
+$else
+    <ul>
+        $forall post <- sort posts
+            <li>
+                <a href=@{PostR post}>#{post}

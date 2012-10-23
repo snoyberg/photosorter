@@ -1,0 +1,26 @@
+$(function() {
+    function onUpdate() {
+        $.ajax({
+            url: "@{SetNameR}",
+            data: {
+                file: $(this).parent().children("input[name=file]").val(),
+                newname: $(this).val()
+            },
+            dataType: "json",
+            type: 'POST'
+        });
+    }
+    $("input[name=newname]").keyup(onUpdate).keydown(onUpdate).keypress(onUpdate);
+    function descUpdate() {
+        $.ajax({
+            url: "@{SetDescriptionR}",
+            data: {
+                post: $(this).data("post"),
+                content: $(this).val()
+            },
+            dataType: "json",
+            type: 'POST'
+        });
+    }
+    $("#description").keyup(descUpdate).keydown(descUpdate).keypress(descUpdate);
+});

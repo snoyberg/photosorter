@@ -1,0 +1,31 @@
+<p>#{root}
+<p>
+    <a href=@{HomeR}>Go home
+    <form method=post>
+        <button>Make it so!
+$forall (file', mmedia) <- files
+    $with (file, full) <- file'
+        <table>
+            <tr>
+                <td>
+                    #{file}
+                <td>
+                    <img width=200px src=@{ImageR full}>
+                <td>
+                    <form .set-dest>
+                        <input type=hidden name=file value=#{full}>
+                        <div>
+                            <label>
+                                <input type=radio name=dest value=delete :isChosen mmedia (PostName "delete"):checked>
+                                Delete
+                        $forall post <- posts
+                            <div>
+                                <label>
+                                    <input type=radio name=dest value=#{post} :isChosen mmedia post:checked>
+                                    #{post}
+                    <div>
+                        <button .add-new-post>Add new post
+                        <form style=display:none>
+                            <input type=date placeholder=Date>
+                            <input type=text placeholder=Slug>
+                            <button .add-new-post2>Add new post

@@ -1,0 +1,20 @@
+<p>#{post}
+<p>
+    <a href=@{HomeR}>Go home
+    <form method=post>
+        <button>I'm all done, put it in topost
+<textarea #description data-post=#{post}>
+    $maybe desc <- mdesc
+        #{unTextarea $ descriptionContent $ entityVal desc}
+<table>
+    $forall (file', mname) <- files
+        $with (file, full) <- file'
+            <tr>
+                <td>
+                    #{file}
+                <td>
+                    <img width=200px src=@{ImageR full}>
+                <td>
+                    <form>
+                        <input type=hidden name=file value=#{full}>
+                        <input type=text name=newname placeholder="New Name" value=#{getName mname}>

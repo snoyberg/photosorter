@@ -1,0 +1,9 @@
+<p>
+    <a href=@{HomeR}>Go home
+$if null folders
+    <p>No folders available
+$else
+    <ul>
+        $forall folder <- sort folders
+            <li>
+                <a href=@{IncomingR folder}>#{folder}

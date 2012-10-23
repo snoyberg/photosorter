@@ -1,0 +1,6 @@
+<p>
+    <a href=@{IncomingListR}>Incoming folders
+<p>
+    <a href=@{PostListR}>Posts
+<p>
+    <a href=@{ToPostListR}>Ready to post
