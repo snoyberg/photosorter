@@ -1,0 +1,24 @@
+Default: &defaults
+  user: photosorter
+  password: photosorter
+  host: localhost
+  port: 5432
+  database: photosorter
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: photosorter_test
+  <<: *defaults
+
+Staging:
+  database: photosorter_staging
+  poolsize: 100
+  <<: *defaults
+
+Production:
+  database: photosorter_production
+  poolsize: 100
+  <<: *defaults
