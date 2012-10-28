@@ -4,3 +4,5 @@ dist/
 config/client_session_key.aes
 photosorter.sqlite3
 photosorter.keter
+*.o
+*.hi

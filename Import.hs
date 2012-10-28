@@ -21,6 +21,7 @@ import Control.Monad (foldM, filterM)
 import Data.List (sortBy, sort)
 import Data.Ord (comparing)
 import Control.Arrow ((&&&))
+import Import.Fay as Import
 
 #if __GLASGOW_HASKELL__ >= 704
 import           Data.Monoid          as Import

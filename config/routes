@@ -16,3 +16,4 @@
 /set-description SetDescriptionR POST
 /topost ToPostListR GET
 /topost/#PostName/unpost UnPostR POST
+/json CommandR POST

@@ -21,9 +21,11 @@ Flag library-only
     Default:       False
 
 library
+    hs-source-dirs: ., fay-shared
     exposed-modules: Application
                      Foundation
                      Import
+                     Import.Fay
                      Model
                      Settings
                      Settings.StaticFiles
@@ -40,6 +42,8 @@ library
                      Handler.SetDescription
                      Handler.ToPostList
                      Handler.UnPost
+                     Handler.Command
+                     SharedTypes
 
     if flag(dev) || flag(library-only)
         cpp-options:   -DDEVELOPMENT
@@ -59,6 +63,7 @@ library
                 FlexibleContexts
                 EmptyDataDecls
                 NoMonomorphismRestriction
+                RankNTypes
 
     build-depends: base                          >= 4          && < 5
                  -- , yesod-platform                >= 1.1        && < 1.2
@@ -91,6 +96,9 @@ library
                  , system-fileio
                  , transformers
                  , blaze-html
+                 , fay
+                 , aeson
+                 , process
 
 executable         photosorter
     if flag(library-only)

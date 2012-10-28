@@ -17,6 +17,7 @@ getIncomingR root = do
     defaultLayout $ do
         setTitle "Incoming"
         $(widgetFile "incoming")
+        $(fayFile "Incoming")
         addScriptEither $ urlJqueryJs y
   where
     isChosen Nothing _ = False
