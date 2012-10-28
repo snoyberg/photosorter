@@ -12,7 +12,7 @@ import SharedTypes
 main :: Fay ()
 main = ready $ do
     select "button.add-new-post" >>= onClick (\e -> do
-        alert' "You clicked the button"
+        alert "You clicked the button"
         eventSource e >>= hide >>= next >>= unhide
         return False
         )
