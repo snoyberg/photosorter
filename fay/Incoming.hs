@@ -5,14 +5,13 @@ import Language.Fay.Prelude
 import Language.Fay.JQuery
 import Language.Fay.DOM
 import Language.Fay.FFI
+import Language.Fay.Yesod
 
-import Client.API
 import SharedTypes
 
 main :: Fay ()
 main = ready $ do
     select "button.add-new-post" >>= onClick (\e -> do
-        alert "You clicked the button"
         eventSource e >>= hide >>= next >>= unhide
         return False
         )

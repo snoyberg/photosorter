@@ -8,6 +8,7 @@ module Application
 import Import
 import Settings
 import Yesod.Auth
+import Yesod.Fay
 import Yesod.Default.Config
 import Yesod.Default.Main
 import Yesod.Default.Handlers
@@ -30,7 +31,7 @@ import Handler.SetName
 import Handler.SetDescription
 import Handler.ToPostList
 import Handler.UnPost
-import Handler.Command
+import Handler.Fay
 
 -- This line actually creates our YesodDispatch instance. It is the second half
 -- of the call to mkYesodData which occurs in Foundation.hs. Please see the
@@ -59,7 +60,7 @@ makeFoundation conf = do
               Database.Persist.Store.applyEnv
     p <- Database.Persist.Store.createPoolConfig (dbconf :: Settings.PersistConfig)
     Database.Persist.Store.runPool dbconf (runMigration migrateAll) p
-    return $ App conf s p manager dbconf
+    return $ App conf s p manager dbconf onCommand
 
 -- for yesod devel
 getApplicationDev :: IO (Int, Application)

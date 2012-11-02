@@ -6,3 +6,5 @@ photosorter.sqlite3
 photosorter.keter
 *.o
 *.hi
+fay/Language/Fay/Yesod.hs
+yesod-devel/

@@ -2,7 +2,6 @@ module Handler.Incoming where
 
 import Import
 import Control.Monad (forM, forM_)
-import Yesod.Form.Jquery
 import Filesystem
 import Filesystem.Path.CurrentOS (fromText)
 
@@ -13,12 +12,10 @@ getIncomingR root = do
         x <- getBy $ UniqueMedia $ snd fp
         return (fp, x))
     posts <- liftIO getPosts
-    y <- getYesod
     defaultLayout $ do
         setTitle "Incoming"
         $(widgetFile "incoming")
         $(fayFile "Incoming")
-        addScriptEither $ urlJqueryJs y
   where
     isChosen Nothing _ = False
     isChosen (Just (Entity _ m)) s = mediaPost m == Just s

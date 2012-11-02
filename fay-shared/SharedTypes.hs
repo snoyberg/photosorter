@@ -4,9 +4,7 @@ module SharedTypes where
 
 import Language.Fay.Prelude
 import Language.Fay.FFI
-
-data Returns a = Returns
-    deriving (Show, Read, Data, Typeable)
+import Language.Fay.Yesod
 
 data Command = AddPost String String (Returns ())
              | SetPost String String (Returns ())
