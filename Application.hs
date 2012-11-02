@@ -23,8 +23,6 @@ import Handler.Home
 import Handler.IncomingList
 import Handler.Incoming
 import Handler.Image
-import Handler.AddPost
-import Handler.SetPost
 import Handler.PostList
 import Handler.Post
 import Handler.SetName

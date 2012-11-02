@@ -34,8 +34,6 @@ library
                      Handler.IncomingList
                      Handler.Incoming
                      Handler.Image
-                     Handler.AddPost
-                     Handler.SetPost
                      Handler.PostList
                      Handler.Post
                      Handler.SetName

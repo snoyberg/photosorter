@@ -8,8 +8,6 @@
 /incoming IncomingListR GET
 /incoming/#FilePath' IncomingR GET POST
 /image/#FilePath' ImageR GET
-/add-post AddPostR POST
-/set-post SetPostR POST
 /posts PostListR GET
 /posts/#PostName PostR GET POST
 /set-name SetNameR POST
