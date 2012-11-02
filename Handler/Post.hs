@@ -18,6 +18,7 @@ getPostR post = do
     defaultLayout $ do
         setTitle "Post"
         $(widgetFile "post")
+        $(fayFile "Post")
         addScriptEither $ urlJqueryJs y
   where
     getName Nothing = ""

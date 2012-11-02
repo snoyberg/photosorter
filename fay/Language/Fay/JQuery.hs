@@ -513,6 +513,15 @@ onKeycode callback el = do
                                    _  -> SomeKey code))
              el
 
+onKeyUp :: (EventObject -> Fay Bool) -> JQuery -> Fay JQuery
+onKeyUp = ffi "%2['keyup'](%1)"
+
+onKeyDown :: (EventObject -> Fay Bool) -> JQuery -> Fay JQuery
+onKeyDown = ffi "%2['keydown'](%1)"
+
+onKeyPress :: (EventObject -> Fay Bool) -> JQuery -> Fay JQuery
+onKeyPress = ffi "%2['keypress'](%1)"
+
 onClick :: (EventObject -> Fay Bool) -> JQuery -> Fay JQuery
 onClick = ffi "%2['click'](%1)"
 
@@ -524,3 +533,6 @@ click = ffi "%1['click']()"
 
 onLiveChange :: Double -> Fay () -> JQuery -> Fay JQuery
 onLiveChange = ffi "%3['livechange'](%1,%2)"
+
+getData :: String -> JQuery -> Fay String
+getData = ffi "%2.data(%1)"

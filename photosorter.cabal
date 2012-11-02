@@ -36,8 +36,6 @@ library
                      Handler.Image
                      Handler.PostList
                      Handler.Post
-                     Handler.SetName
-                     Handler.SetDescription
                      Handler.ToPostList
                      Handler.UnPost
                      Handler.Fay

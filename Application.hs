@@ -25,8 +25,6 @@ import Handler.Incoming
 import Handler.Image
 import Handler.PostList
 import Handler.Post
-import Handler.SetName
-import Handler.SetDescription
 import Handler.ToPostList
 import Handler.UnPost
 import Handler.Fay

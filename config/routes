@@ -10,8 +10,6 @@
 /image/#FilePath' ImageR GET
 /posts PostListR GET
 /posts/#PostName PostR GET POST
-/set-name SetNameR POST
-/set-description SetDescriptionR POST
 /topost ToPostListR GET
 /topost/#PostName/unpost UnPostR POST
 

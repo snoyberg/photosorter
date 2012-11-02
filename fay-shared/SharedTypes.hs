@@ -8,6 +8,8 @@ import Language.Fay.Yesod
 
 data Command = AddPost String String (Returns ())
              | SetPost String String (Returns ())
+             | SetDescription String String (Returns ())
+             | SetName String String (Returns ())
     deriving (Show, Read, Data, Typeable)
 
 instance Foreign Command
