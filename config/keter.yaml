@@ -1,7 +1,7 @@
 exec: ../dist/build/photosorter/photosorter
 args:
     - production
-host: 10.0.0.3
+host: 192.168.0.2
 postgres: true
 
 # Use the following to automatically copy your bundle upon creation via `yesod
